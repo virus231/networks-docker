@@ -8,4 +8,12 @@
 8. Not connecting to server
 9. docker build -t favourite-node .
 `10. docker run --name favourites -d --rm -p 3000:3000 favourite-node
-11. docker ps => container running `
+10. docker ps => container running `
+
+### **Container to Container Communication: A Basic Solution**
+1. `docker run mongo`
+2. `docker run -d --name mongodb mongo`
+3. `docker container inspect mongodb`
+4. `docker build -t favourite-node .`
+5. `docker run --name favourites -d --rm -p 3000:3000 favourite-node`
+6. `docker ps` - 2 containers running
