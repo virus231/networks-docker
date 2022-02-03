@@ -17,3 +17,12 @@
 4. `docker build -t favourite-node .`
 5. `docker run --name favourites -d --rm -p 3000:3000 favourite-node`
 6. `docker ps` - 2 containers running
+
+### **Introducing Docker Networks: Elegant Container to Container Communication**
+1. `docker network create favourites-net`
+2. `docker network ls` - network created
+3. `docker run -d --name mongodb --network favourites-net mongo `
+4. `docker build -t favourite-node .` 
+5. `docker run --name favourites -d --rm -p 3000:3000 --network favourites-net favourite-node`
+6. `docker logs favourites`
+7. 
